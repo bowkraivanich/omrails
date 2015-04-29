@@ -120,13 +120,14 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  bootstrap-sass (~> 3.3.4)
+  bootstrap-sass
   coffee-rails (~> 4.0.0)
   jbuilder (~> 2.0)
   jquery-rails
   pg
   rails (= 4.1.1)
-  sass-rails (~> 4.0.3)
+  sass
+  sass-rails
   sdoc (~> 0.4.0)
   spring
   sqlite3
