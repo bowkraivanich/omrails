@@ -1,7 +1,11 @@
-<div class="jumbotron">
-  <h1>Welcome to My first Rails App!</h1>
-  <p>Learning from <%= link_to "One Month Rails", "http://onemonthrails.com" %></p>
-  <p>
-  	<%= link_to "Sign Up Now!", "#", class: "btn btn-primary btn-lg" %>
-  </p>
-</div>
+<% if user_signed_in? %>
+	<h1>Welcome back, Member Name!</h1>
+<% else %>
+	<div class="jumbotron">
+	  <h1>Welcome to My first Rails App!</h1>
+	  <p>Learning from <%= link_to "One Month Rails", "http://onemonthrails.com" %></p>
+	  <p>
+	  	<%= link_to "Sign Up Now!", new_user_registration_path, class: "btn btn-primary btn-lg" %>
+	  </p>
+	</div>
+<% end %>
