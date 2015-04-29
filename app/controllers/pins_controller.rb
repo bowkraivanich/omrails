@@ -40,12 +40,16 @@ class PinsController < ApplicationController
     respond_with(@pin)
   end
 
+  # def contract_params
+  #   params.require(:section).permit(:id, :descriptions, :image)
+  # end
+
   private
     def set_pin
       @pin = Pin.find(params[:id])
     end
 
     def pin_params
-      params.require(:pin).permit(:descriptions)
+      params.require(:pin).permit(:descriptions, :image)
     end
 end
