@@ -82,4 +82,14 @@ Rails.application.configure do
   config.active_record.dump_schema_after_migration = false
 
   config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
+
+  # Paperclip should use Amazon S3 on Heroku
+  config.paperclip_defaults = {
+    :storage => :s3,
+    :s3_credentials => {
+      :bucket => 'bowrails',
+      :access_key_id => 'AKIAJ6QTTSLR7EITXZMA',
+      :secret_access_key => '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'
+    }
+}
 end
