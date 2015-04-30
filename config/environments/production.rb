@@ -87,9 +87,9 @@ Rails.application.configure do
   config.paperclip_defaults = {
     :storage => :s3,
     :s3_credentials => {
-      :bucket => ENV['bowrails'],
-      :access_key_id => ENV['AKIAJ6QTTSLR7EITXZMA'],
-      :secret_access_key => ENV['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']
+      :bucket => 'bowrails',
+      :access_key_id => 'AKIAJ6QTTSLR7EITXZMA',
+      :secret_access_key => '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'
     }
 }
 end
